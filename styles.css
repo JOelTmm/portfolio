@@ -1,0 +1,143 @@
+/* Style global */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background: #222;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #44d9e8;
+}
+
+.header-container h1 {
+    font-size: 2.5em;
+    color: #44d9e8;
+    text-shadow: 0px 0px 8px #44d9e8;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #bbb;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #44d9e8;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #44d9e8;
+}
+
+/* Projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #44d9e8;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #ccc;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #44d9e8;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.project-card .btn:hover {
+    background: #1db6c8;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 3px solid #44d9e8;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .header-container h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin: 10px auto;
+    }
+}
