@@ -1,102 +1,70 @@
-/* Styles de base */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(to right, #4CAF50, #8BC34A);
-    color: white;
-}
-
-header h1 {
-    font-size: 2.5rem;
-}
-
-nav {
-    background: #444;
-    color: white;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-nav a:hover {
-    background: #666;
-    border-radius: 5px;
-}
-
-section {
-    padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.skill {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.project {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-}
-
-.project h3 {
-    margin-top: 0;
-    color: #4CAF50;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: white;
-}
-
-/* Styles responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav {
-        flex-wrap: wrap;
-    }
-
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil GitHub - Joël Traina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon Portfolio 👋</h1>
+        <p>Développeur passionné par l'informatique et les jeux vidéo.</p>
+    </header>
+    <nav>
+        <a href="#bio">Biographie</a>
+        <a href="#badges">Badges</a>
+        <a href="#projects">Projets</a>
+        <a href="#links">Liens</a>
+    </nav>
+    <section id="bio">
+        <h2>🧑‍💻 Biographie professionnelle</h2>
+        <p>Je suis <strong>Joël Traina</strong>, passionné par l'informatique et les jeux vidéo depuis mon enfance. Actuellement en formation, je me spécialise dans le développement logiciel et aspire à en faire ma carrière.</p>
+    </section>
+    <section id="badges">
+        <h2>🏅 Badges et certifications</h2>
+        <div class="badge-container">
+            <span class="badge">Arduino - Expert</span>
+            <span class="badge">C++ - Intermediate</span>
+            <span class="badge">Python 3.9</span>
+            <span class="badge">Linux - Basic</span>
+            <span class="badge">Git - Intermediate</span>
+            <span class="badge">HTML/CSS - Advanced</span>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>🚀 Projets principaux</h2>
+        <div class="project">
+            <h3>1. Tic Tac Toe en Python</h3>
+            <p><strong>Description :</strong> Une version Python du jeu Tic Tac Toe en ligne de commande.</p>
+            <p><strong>Technologies :</strong> Python</p>
+            <p><strong>Challenges :</strong> Logique du jeu, conditions de victoire, entrées utilisateur.</p>
+            <p><strong>Résultat :</strong> Un jeu fluide en terminal.</p>
+        </div>
+        <div class="project">
+            <h3>2. Site de Fans</h3>
+            <p><strong>Description :</strong> Un site dédié à une communauté de fans.</p>
+            <p><strong>Technologies :</strong> HTML, CSS</p>
+            <p><strong>Challenges :</strong> Conception responsive et interface utilisateur.</p>
+        </div>
+        <div class="project">
+            <h3>3. Robot Bong</h3>
+            <p><strong>Description :</strong> Un robot utilisant Arduino et C++ pour des actions autonomes.</p>
+        </div>
+        <div class="project">
+            <h3>4. Compétition 3D Robot Bong</h3>
+            <p><strong>Description :</strong> Modélisation 3D pour lancer des balles dans une simulation.</p>
+        </div>
+    </section>
+    <section id="links">
+        <h2>🌐 Liens professionnels</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/veron-messina-b94638251/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://JOelTmm.github.io/portfolio/" target="_blank">Mon portfolio</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Joël Traina - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
