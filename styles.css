@@ -1,3 +1,11 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1, header p {
+    animation: fadeIn 1s ease-in-out;
+}
 /* Styles globaux */
 body {
     font-family: 'Roboto', sans-serif;
@@ -6,7 +14,33 @@ body {
     background: #121212;
     color: #f1f1f1;
     line-height: 1.6;
+    background: linear-gradient(-45deg, #1a1a40, #3a0ca3, #4361ee);
+    background-size: 400% 400%;
+    animation: gradientMove 8s infinite alternate;
+    margin: 0;
+    overflow-x: hidden;
+
 }
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
 
 /* En-tête */
 header {
@@ -35,6 +69,9 @@ nav {
     background: #1f1f1f;
     padding: 10px 0;
     border-bottom: 3px solid #00ff88;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -74,27 +111,51 @@ section h2 {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    padding: 20px;
 }
 
 .badge {
-    background: #00ff88;
-    color: #121212;
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-size: 0.9rem;
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 16px;
     font-weight: bold;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+.badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 102, 0, 1);
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 204, 0, 0.8); }
+    100% { box-shadow: 0 0 20px rgba(255, 102, 0, 1); }
+}
+
+
 /* Projets */
+#projects {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 .project {
     margin-bottom: 15px;
     padding: 15px;
-    background: #262626;
+    background: rgba(0, 0, 0, 0.7);
     border-left: 4px solid #00ff88;
     border-radius: 8px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
 }
 
 .project h3 {
@@ -103,8 +164,9 @@ section h2 {
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 255, 136, 0.5);
+    transform: rotateY(10deg)
 }
 
 /* Liens */
